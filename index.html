@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Homework 13-14</title>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	<script src="js/jquery.js"></script>
+	<script src="js/tmpl.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+</body>
+<script type="text/html" id="tmpl-script">
+	<div class="wrapper">
+		<h3>Тест по программированию</h3>
+		<ol class="question-list" style="text-align: left;">
+			<% for(var i=0; i<data.length; i++) { %>
+			<fieldset>
+			<li><%= data[i].question %></li>
+				<% for(var j=0; j<data[i].answers.length; j++) { %>
+				<label style="display: block;"><input type="checkbox"><%= data[i].answers[j] %></label>
+				<% } %>
+			</fieldset>
+			<% } %>
+		</ol>
+		<button id="check-answers" class="btn btn-primary btn-lg">Проверить мои результаты</button></div>
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
